@@ -29,3 +29,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ng new various --createApplication="false"
 ng generate application resume
 ng generateapplication education
+---
+run commands
+ng serve resume
+ ng serve education
+ ng serve experience
+go to browse to http://localhost:5000
