@@ -1,5 +1,13 @@
-<h1>Resume</h1>
-<a routerLink='/'>Click on tabs to view parts of Resume</a> &#160;
-<a routerLink='/education'>Education</a>
-<a routerLink='/experience'>Experience</a>
+<h1><a routerLink='/'>Resume</a></h1>
+
+<div class="tab">
+    <button class="tablinks" *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.active]="tab.active">
+        <a routerLink='{{tab.link}}'>{{tab.title}}</a></button>
+  </div>
+<ul class="nav nav-tabs">
+    <div *ngFor="let tab of tabs" id="{{tab.identifier}}" class="tabcontent">
+        <p>{{tab.details}}</p>
+      </div>
+   
+</ul>
 <router-outlet></router-outlet>

@@ -33,7 +33,7 @@ module.exports = {
         
         // For hosts (please adjust)
          remotes: {
-             "education": "education@http://localhost:5000/remoteEntry.js",
+             "education": "education@http://localhost:5002/remoteEntry.js",
         //     "experience": "experience@http://localhost:4200/remoteEntry.js",
 
          },
