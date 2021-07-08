@@ -27,5 +27,6 @@ export class AppComponent {
   selectTab = (tab: any) =>{
     this.tabs.forEach(t => t.active = false);
     tab.active = true;
+    console.log('tabs',this.tabs);
   }
 }

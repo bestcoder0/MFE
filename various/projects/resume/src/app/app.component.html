@@ -4,10 +4,4 @@
     <button class="tablinks" *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.active]="tab.active">
         <a routerLink='{{tab.link}}'>{{tab.title}}</a></button>
   </div>
-<ul class="nav nav-tabs">
-    <div *ngFor="let tab of tabs" id="{{tab.identifier}}" class="tabcontent">
-        <p>{{tab.details}}</p>
-      </div>
-   
-</ul>
 <router-outlet></router-outlet>

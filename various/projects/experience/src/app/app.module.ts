@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ExpfeatureModule } from './expfeature/expfeature.module';
 import { ListComponent } from './list/list.component';
 
 @NgModule({
@@ -12,7 +13,8 @@ import { ListComponent } from './list/list.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ExpfeatureModule
   ],
   providers: [],
   bootstrap: [AppComponent]

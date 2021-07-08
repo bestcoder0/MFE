@@ -5,6 +5,7 @@ import { ListComponent } from 'projects/resume/src/app/list/list.component';
 
 
 const URL = 'http://localhost:5002/remoteEntry.js';
+const URLexp = 'http://localhost:5003/remoteEntry.js';
 
 
 const routes: Routes = [{
@@ -15,25 +16,29 @@ const routes: Routes = [{
     exposedModule: './EdufeatureModule'
   })
   .then(m =>{
-    debugger;
   return m.EdufeatureModule;}
   ) .catch((err) => {
     console.log('err', err);
-    debugger;
   })
-  
-  /*
-  loadChildren: () =>
-    import('education/EduFeatureModule').then((m) => {
-      return m.EduFeatureModule;
-    }),
-  */
 },
 {
   path: '',
   component: ListComponent,
   pathMatch: 'full'
 },
+{
+  path: 'experience',
+  loadChildren: () => loadRemoteModule({
+    remoteEntry: URLexp,
+    remoteName: 'experience',
+    exposedModule: './ExpfeatureModule'
+  })
+  .then(m =>{
+  return m.ExpfeatureModule;}
+  ) .catch((err) => {
+    console.log('err', err);
+  })
+  }
 ];
 
 @NgModule({

@@ -10,7 +10,7 @@ sharedMappings.register(
 
 module.exports = {
   output: {
-    uniqueName: "resume",
+    uniqueName: "experience",
     publicPath: "auto"
   },
   optimization: {
@@ -25,18 +25,19 @@ module.exports = {
     new ModuleFederationPlugin({
       
         // For remotes (please adjust)
-        // name: "resume",
-        // filename: "remoteEntry.js",
-        // exposes: {
-        //     './Component': './projects/resume/src/app/app.component.ts',
-        // },        
+         name: "experience",
+         filename: "remoteEntry.js",
+         exposes: {
+             // './Component': './projects/experience/src/app/app.component.ts',
+             './ExpfeatureModule': './projects/experience/src/app/expfeature/expfeature.module.ts',
+         },        
         
         // For hosts (please adjust)
-         remotes: {
-             "education": "education@http://localhost:5002/remoteEntry.js",
-             "experience": "experience@http://localhost:5003/remoteEntry.js",
+        // remotes: {
+        //     "education": "education@http://localhost:5002/remoteEntry.js",
+        //     "resume": "resume@http://localhost:5000/remoteEntry.js",
 
-         },
+        // },
 
         shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' }, 

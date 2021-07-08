@@ -6,12 +6,7 @@ const routes: Routes = [{
   path:'',
   component: ListComponent,
   pathMatch: 'full'
-}
-/*,{
-  path:'education',
-  loadChildren:() =>
-    import('./edufeature/edufeature.module').then(m => m.EdufeatureModule)
-}*/];
+}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
